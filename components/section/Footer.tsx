@@ -15,7 +15,7 @@ import {
 import TextLink from "components/common/TextLink";
 import FacebookIconLink from "components/common/FacebookIconLink";
 import InstagramIconLink from "components/common/InstagramIconLink";
-import TwitterIconLink from "components/common/TwitterIconLink";
+import LinkdInLink from "components/common/LinkedInLink";
 // custom context
 import ConstantsContext from "context/constantsContext";
 // type
@@ -66,12 +66,21 @@ const Footer: React.FunctionComponent<FooterProps> = (props) => {
           ))}
         </CustomCardContent>
         <CardContent sx={{ display: "flex", justifyContent: "center" }}>
-          <FacebookIconLink />
-          <InstagramIconLink />
-          <TwitterIconLink />
+          <InstagramIconLink
+            href="https://www.instagram.com/_.mr.adjei/"
+            target="_blank"
+          />
+          <LinkdInLink href="https://www.linkedin.com/in/mr-adjei-347706256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" />
         </CardContent>
       </CustomCard>
-      <Typography component="p" variant="body1" textAlign="center">
+      <Typography
+        component="p"
+        variant="body1"
+        textAlign="left"
+        style={{ paddingLeft: "32px" }}
+      >
+        &copy; {new Date().getFullYear()} Japhet Adofo-Adjei. All rights
+        reserved.
       </Typography>
     </>
   );

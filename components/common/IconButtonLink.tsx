@@ -7,7 +7,7 @@ import CustomIconButton from 'components/common/CustomIconButton';
 // type
 import { IconButtonProps } from '@mui/material';
 interface IconButtonLinkProps extends IconButtonProps {
-  href?: string;
+  href?: string; target?: string;
 }
 
 const CustomIconButtonWithRef = React.forwardRef<
@@ -26,7 +26,7 @@ CustomIconButtonWithRef.displayName = 'CustomIconButtonWithRef';
 const IconButtonLink: React.FunctionComponent<IconButtonLinkProps> = (
   props
 ) => {
-  const { children, href = '#', ref, ...otherProps } = props;
+  const { children, href = '#', target='#', ref, ...otherProps } = props;
 
   return (
     <Link href={href} passHref>

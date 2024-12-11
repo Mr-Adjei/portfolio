@@ -2,11 +2,12 @@
 import * as React from 'react';
 // @mui icon
 import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 // custom component
 import IconButtonLink from 'components/common/IconButtonLink';
 // type
 import { IconButtonProps } from '@mui/material';
-interface TwitterIconLinkProps extends IconButtonProps {
+interface LinkdInLinkProps extends IconButtonProps {
   anchorStyles?: React.CSSProperties;
   href?: string;
   iconColor?:
@@ -22,7 +23,7 @@ interface TwitterIconLinkProps extends IconButtonProps {
   iconSize?: 'inherit' | 'large' | 'medium' | 'small' | undefined;
 }
 
-const TwitterIconLink: React.FunctionComponent<TwitterIconLinkProps> = (
+const LinkdInLink: React.FunctionComponent<LinkdInLinkProps> = (
   props
 ) => {
   const {
@@ -35,9 +36,9 @@ const TwitterIconLink: React.FunctionComponent<TwitterIconLinkProps> = (
 
   return (
     <IconButtonLink aria-label="Twitter button" href={href} {...otherProps}>
-      <TwitterIcon color={iconColor} fontSize={iconSize} />
+      <LinkedInIcon color={iconColor} fontSize={iconSize} />
     </IconButtonLink>
   );
 };
 
-export default TwitterIconLink;
+export default LinkdInLink;

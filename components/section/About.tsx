@@ -22,7 +22,7 @@ import {
 // custom component
 import FacebookIconLink from "components/common/FacebookIconLink";
 import InstagramIconLink from "components/common/InstagramIconLink";
-import TwitterIconLink from "components/common/TwitterIconLink";
+import LinkdInLink from "components/common/LinkedInLink";
 import ContainerGrid from "components/common/ContainerGrid";
 import ExpandMoreIconButton from "components/common/ExpandMoreIconButton";
 // type
@@ -132,8 +132,9 @@ const About: React.FunctionComponent<AboutProps> = (props) => {
               <CardContent>
                 <Typography component="p" variant="body1">
                   I am a 4th year University student of Kwame Nkrumah University
-                  of Science and Technology. I&apos;m a Ghanaian. I&apos;m a brother, a son and a friend. I
-                  love music, movies, anime and video games.
+                  of Science and Technology. I&apos;m a Ghanaian. I&apos;m a
+                  brother, a son and a friend. I love music, movies, anime and
+                  video games.
                 </Typography>
                 <Collapse
                   in={showMore}
@@ -169,9 +170,11 @@ const About: React.FunctionComponent<AboutProps> = (props) => {
                   />
                 )}
                 <div>
-                  <FacebookIconLink />
-                  <InstagramIconLink />
-                  <TwitterIconLink />
+                  <InstagramIconLink
+                    href="https://www.instagram.com/_.mr.adjei/"
+                    target="_blank"
+                  />
+                  <LinkdInLink href="https://www.linkedin.com/in/mr-adjei-347706256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" />
                 </div>
               </CustomCardActions>
             </Card>

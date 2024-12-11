@@ -9,6 +9,7 @@ import { IconButtonProps } from '@mui/material';
 interface InstagramIconLinkProps extends IconButtonProps {
   anchorStyles?: React.CSSProperties;
   href?: string;
+  target?: string;
   iconColor?:
     | 'inherit'
     | 'action'
@@ -28,13 +29,14 @@ const InstagramIconLink: React.FunctionComponent<InstagramIconLinkProps> = (
   const {
     anchorStyles,
     href = '#',
+    target= '#',
     iconColor = 'inherit',
     iconSize = 'inherit',
     ...otherProps
   } = props;
 
   return (
-    <IconButtonLink aria-label="Instagram button" href={href} {...otherProps}>
+    <IconButtonLink aria-label="Instagram button" href={href} target={target} {...otherProps}>
       <InstagramIcon color={iconColor} fontSize={iconSize} />
     </IconButtonLink>
   );
